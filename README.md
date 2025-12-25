@@ -38,14 +38,41 @@ Request Body:
 {
   "email": "tamij@example.com",
   "password": "123456"
-  }
-- POST /api/courses
-Request Body:
+}
 
+
+- Response:
+{
+  "token": "jwt_token_here"
+}
+
+
+
+📚 Courses
+- GET /api/courses
+Response:
+[
+  { "id": 1, "title": "Math Basics", "teacher": "Mr. Rahman" },
+  { "id": 2, "title": "Physics Advanced", "teacher": "Ms. Akter" }
+]
+- POST /api/courses
+Request Body:
 {
   "title": "Chemistry Fundamentals",
   "teacher": "Dr. Karim"
 }
+- Response:
+{
+  "message": "Course added successfully"
+}
+- DELETE /api/courses/:id
+Response:
+{
+  "message": "Course deleted successfully"
+}
+
+
+
 🗄️ Database schema
 Student
 {
@@ -54,17 +81,24 @@ Student
   "password": "string (hashed)",
   "courses": ["courseId"]
 }
+
+
 Course
 {
   "title": "string",
   "teacher": "string",
   "students": ["studentId"]
 }
+
+
 Admin
 {
   "username": "string",
   "password": "string (hashed)"
 }
+
+
+
 📂 Project structure
 alfa-coaching-portal/
 ├── frontend/   # React frontend
@@ -73,7 +107,7 @@ alfa-coaching-portal/
 ├── routes/     # API routes
 └── README.md
 
-
+
 
 🧪 Testing tips
 - Use Postman or fetch from the frontend to hit:
@@ -83,6 +117,5 @@ alfa-coaching-portal/
 
 📜 License
 This project is licensed under the MIT License.
-
 
 
