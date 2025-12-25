@@ -48,14 +48,14 @@ Request Body:
 
 
 
-📚 Courses
+### 📚 Courses
 - GET /api/courses
 Response:
 [
   { "id": 1, "title": "Math Basics", "teacher": "Mr. Rahman" },
   { "id": 2, "title": "Physics Advanced", "teacher": "Ms. Akter" }
 ]
-- POST /api/courses
+### POST /api/courses
 Request Body:
 {
   "title": "Chemistry Fundamentals",
@@ -73,7 +73,7 @@ Response:
 
 
 
-🗄️ Database schema
+### Database schema
 Student
 {
   "name": "string",
@@ -99,7 +99,7 @@ Admin
 
 
 
-📂 Project structure
+ ### 📂 Project structure
 alfa-coaching-portal/
 ├── frontend/   # React frontend
 ├── backend/    # Node.js + Express backend
