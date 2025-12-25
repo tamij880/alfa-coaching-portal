@@ -1,22 +1,35 @@
 # Alfa Coaching Portal
 
 Alfa Coaching Portal is a full-stack educational web platform built with **React, Node.js, Express, and MongoDB**.  
-It is designed to provide smart coaching support for students, offering a seamless learning experience with modern web technologies.
+It provides students with study materials, notes, guides, and online exams.
+
+---
 
 ## 🚀 Features
 - Student registration and login system
-- Secure authentication and route protection
+- Secure authentication with JWT and protected routes
 - Course management (add, update, delete, view)
 - Admin dashboard for managing students and courses
-- Responsive frontend built with React
-- RESTful backend API using Node.js and Express
+- Responsive frontend built with React + React Router
+- RESTful backend API using Node.js + Express
 - MongoDB Atlas integration for database management
 
-## ⚙️ Installation
+---
 
-Clone the repository and install dependencies:
+## 🌐 Live Demo Links
+- **Frontend (React - Vercel)**: [https://alfa-coaching-portal.vercel.app](https://alfa-coaching-portal.vercel.app)  
+- **Backend (Node.js - Render)**: [https://alfa-coaching-portal-1.onrender.com](https://alfa-coaching-portal-1.onrender.com)
 
-```bash
-git clone https://github.com/tamij880/alfa-coaching-portal.git
-cd alfa-coaching-portal
-npm install
+---
+
+## 📡 API Documentation
+
+### 🔑 Authentication
+- **POST /api/register**  
+  Request Body:
+  ```json
+  {
+    "name": "Tamij",
+    "email": "tamij@example.com",
+    "password": "123456"
+  }
