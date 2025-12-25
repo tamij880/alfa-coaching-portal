@@ -33,3 +33,56 @@ It provides students with study materials, notes, guides, and online exams.
     "email": "tamij@example.com",
     "password": "123456"
   }
+- POST /api/login
+Request Body:
+{
+  "email": "tamij@example.com",
+  "password": "123456"
+  }
+- POST /api/courses
+Request Body:
+
+{
+  "title": "Chemistry Fundamentals",
+  "teacher": "Dr. Karim"
+}
+🗄️ Database schema
+Student
+{
+  "name": "string",
+  "email": "string",
+  "password": "string (hashed)",
+  "courses": ["courseId"]
+}
+Course
+{
+  "title": "string",
+  "teacher": "string",
+  "students": ["studentId"]
+}
+Admin
+{
+  "username": "string",
+  "password": "string (hashed)"
+}
+📂 Project structure
+alfa-coaching-portal/
+├── frontend/   # React frontend
+├── backend/    # Node.js + Express backend
+├── models/     # MongoDB schemas
+├── routes/     # API routes
+└── README.md
+
+
+
+🧪 Testing tips
+- Use Postman or fetch from the frontend to hit:
+- POST https://alfa-coaching-portal-1.onrender.com/api/register
+- POST https://alfa-coaching-portal-1.onrender.com/api/login
+- GET  https://alfa-coaching-portal-1.onrender.com/api/courses
+
+📜 License
+This project is licensed under the MIT License.
+
+
+
